@@ -24,21 +24,34 @@ import threejs from "./tech/threejs.svg";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
+import arravo from "./arravo.png";
+import bcx from "./company/BCX.png";
+import fastclaim from "./fastclaim.png";
+import scudo from "./scudo.png";
+import natter from "./company/natter.png"
+import delivery from "./company/delivery.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
+import credence from "./credence.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
   logo,
   backend,
+  natter,
   creator,
   mobile,
   web,
   github,
+  delivery,
+  fastclaim,
   menu,
   close,
+  bcx,
+  credence,
+  scudo,
   css,
   docker,
   figma,
@@ -55,6 +68,7 @@ export {
   meta,
   shopify,
   starbucks,
+  arravo,
   tesla,
   carrent,
   jobit,

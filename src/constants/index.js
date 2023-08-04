@@ -15,14 +15,21 @@ import {
   git,
   figma,
   docker,
+  natter,
   meta,
   starbucks,
+  arravo,
+  delivery,
+  bcx,
   tesla,
   shopify,
   carrent,
+  credence,
   jobit,
   tripguide,
   threejs,
+  scudo,
+  fastclaim,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +49,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Software Development",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "IT Consulting",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Cross-Platform Mobile Development",
     icon: creator,
   },
 ];
@@ -116,55 +123,66 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Lead Application Developer",
+    company_name: "Arravo",
+    icon: arravo,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "November 2020 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Led and managed a high-performing team of 5+ software engineers, guiding them in modifying software, resolving errors, optimizing hardware interfaces, and enhancing overall performance.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web applications using JavaScript (MERN Stack)and other related technologies.",
+      "Active involvement in an Agile team of 7, utilizing standups, code reviews, and pair programming for quality applications.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Lead Software Engineer",
+    company_name: "FastClaim Solutions Limited",
+    icon: fastclaim,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Apr 2022 - July 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Planned, developed, tested, deployed, optimized and maintained a cutting-edge mobile application and website for FastClaim, resulting in over 2,000 downloads within the first 6 months to production",
+      "Collaborated closely with stakeholders, including insurance handlers and customers, to understand their requirements and translate them into actionable software solutions.",
+      "Implemented Scrum methodologies, fostering efficient development cycles, iterative improvements, and timely feature delivery. Enhanced team collaboration, minimized bottlenecks, and increased productivity.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Application Developer",
+    company_name: "BCX (Business Connexion Group)",
+    icon: bcx,
+    iconBg: "#E6DEDD",
+    date: "Sep 2018 - Nov 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Drove technology sales, generating over $650,000 in revenue by aligning solutions to clients’ unique needs across diverse industry verticals.",
+      "Spearheaded the transition from a paper-based approval workflow to a streamlined digital workflow, increasing efficiency and productivity within the organization.",
+      "Provided comprehensive project support, overseeing implementation and services to ensure successful outcomes.",
+      "Constructed a robust cloud library within a short period of time, enabling efficient document management for the organization.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Junior Backend Developer (Remote)",
+    company_name: "Natterbase",
+    icon: natter,
+    iconBg: "#E6DEDD",
+    date: "Feb 2018 - Apr 2018",
+    points: [
+      "Started the development from scratch for Crevance Product. Crevance is a consumer finance provider.",
+      "Used Node.js, Express for API endpoints and MongoDB for the Database.",
+    ],
+  },
+  {
+    title: "Designer/Customer Success",
+    company_name: "Delivery Science",
+    icon: delivery,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Created HTML email templates and newsletters for email marketing campaigns.",
+      "Provided technical and product support.",
+      "Combining research and design skills together to understand users needs and produce concepts/solutions/designs that people want to use.",
+      "Designed fliers, promotion materials like ads for holidays, ID cards, business card for the company staff",
     ],
   },
 ];
@@ -172,35 +190,20 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I thought it was impossible to make a website as beautiful as our product, but Moyo proved me wrong.",
+    name: "Samuel Akame",
+    designation: "CEO",
+    company: "Credenceapp",
+    image: "https://i.ytimg.com/vi/_z8qD3lfoI8/maxresdefault.jpg",
   },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
+
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Credenceapp",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Credence serves as a trustworthy third party platform, protecting the integrity of your transactions when dealing with commodity traders.",
     tags: [
       {
         name: "react",
@@ -211,17 +214,29 @@ const projects = [
         color: "green-text-gradient",
       },
       {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mern-stack",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "red-text-gradient",
+      },
+      {
         name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: credence,
+    source_code_link: "https://credenceapp.co/",
   },
   {
-    name: "Job IT",
+    name: "Scudo",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Secure your future today with Scudo insurance products from leading insurance companies. Start today. (Available on Andorid & iOS also)",
     tags: [
       {
         name: "react",
@@ -232,17 +247,29 @@ const projects = [
         color: "green-text-gradient",
       },
       {
+        name: "mern-stack",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "red-text-gradient",
+      },
+      {
         name: "scss",
         color: "pink-text-gradient",
       },
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: scudo,
+    source_code_link: "https://scudoapp.co/",
   },
   {
-    name: "Trip Guide",
+    name: "FastClaim",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "FastClaim allows you to request your claims on the go. No more long delays in processing your insurance claims. Lodge your claim requests, chat directly with handlers and receive your claim speedily! (Available on Andorid & iOS also)",
     tags: [
       {
         name: "nextjs",
@@ -253,12 +280,28 @@ const projects = [
         color: "green-text-gradient",
       },
       {
+        name: "flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mern-stack",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "red-text-gradient",
+      },
+      {
         name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: fastclaim,
+    source_code_link: "https://getfastclaim.com/",
   },
 ];
 
