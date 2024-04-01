@@ -67,7 +67,7 @@ const About = () => {
       <div className="mt-40 flex-1 gap-3">
           <h2>
             {services.map((service, index) => (
-              <ServiceCard key={service.title} index={index}  {....service} />
+              <ServiceCard key={service.title} index={index}  {...service} />
             ))}
           </h2>
       </div>
