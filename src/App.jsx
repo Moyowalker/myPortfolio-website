@@ -1,36 +1,35 @@
-import { BrowserRouter } from "react-router-dom";
-
 import {
   About,
+  CaseStudies,
   Contact,
   Experience,
   Feedbacks,
+  Footer,
   Hero,
   Navbar,
+  InsightsBot,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
+    <div className="relative min-h-screen bg-slate-950 text-slate-100">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.25),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(13,148,136,0.18),_transparent_60%)]" />
+      <Navbar />
+      <main className="flex flex-col gap-32 pb-24">
+        <Hero />
         <About />
         <Experience />
         <Tech />
         <Works />
+        <CaseStudies />
         <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
+        <InsightsBot />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

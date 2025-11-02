@@ -22,11 +22,13 @@ export const fadeIn = (direction, type, delay, duration) => {
       x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
       y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
       opacity: 0,
+      filter: "blur(8px)",
     },
     show: {
       x: 0,
       y: 0,
       opacity: 1,
+      filter: "blur(0px)",
       transition: {
         type: type,
         delay: delay,
@@ -42,10 +44,12 @@ export const zoomIn = (delay, duration) => {
     hidden: {
       scale: 0,
       opacity: 0,
+      filter: "blur(4px)",
     },
     show: {
       scale: 1,
       opacity: 1,
+      filter: "blur(0px)",
       transition: {
         type: "tween",
         delay: delay,

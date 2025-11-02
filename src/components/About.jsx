@@ -1,69 +1,80 @@
-import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import {
+  aboutSummary,
+  knowledgeHighlights,
+  pillars,
+} from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
-
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="max-w-5xl">
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Operating at the edge of product, AI, and delivery.</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        variants={fadeIn("", "", 0.15, 1)}
+        className="mt-6 max-w-4xl text-base text-slate-300 sm:text-lg"
       >
-        Highly accomplished and dedicated professional with an impressive 7-year track record in software development, 
-        equipped with extensive expertise in advanced technologies, benchmarking, and capacity planning. Positioned 
-        to leverage my skills and experience to drive success within your esteemed organization. Renowned for my 
-        strong management acumen, exceptional leadership qualities, and effective communication skills. Meticulous 
-        in problem-solving and strategic planning.
-        {/* I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in several frameworks and technologies. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life! */}
+        {aboutSummary}
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+      <motion.div
+        variants={fadeIn("", "", 0.25, 1)}
+        className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {pillars.map((pillar, index) => (
+          <motion.article
+            key={pillar.title}
+            whileHover={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 120, damping: 14 }}
+            className="relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
+          >
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${pillar.accent} opacity-20`}
+            />
+            <div className="relative flex flex-col gap-3">
+              <h3 className="text-lg font-semibold text-white">
+                {pillar.title}
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                {pillar.description}
+              </p>
+            </div>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
 
+      <motion.div
+        variants={fadeIn("", "", 0.35, 1)}
+        className="mt-16 grid gap-6 lg:grid-cols-2"
+      >
+        {knowledgeHighlights.map((item) => (
+          <div
+            key={item.topic}
+            className="group relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/50 p-6 backdrop-blur-xl"
+          >
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-indigo-500/10 to-cyan-400/10 opacity-75 transition group-hover:opacity-90" />
+            <div className="relative flex flex-col gap-3">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
+                {item.topic}
+              </h4>
+              <ul className="flex flex-col gap-2 text-sm text-slate-300">
+                {item.points.map((point) => (
+                  <li key={point} className="leading-relaxed">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </motion.div>
     </>
   );
 };

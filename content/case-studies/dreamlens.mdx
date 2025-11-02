@@ -1,0 +1,28 @@
+export const meta = {
+  title: "DreamLens",
+  summary:
+    "Consumer web product that interprets dreams using psychological frameworks layered with LLM insights.",
+  timeline: "2024",
+  tags: ["Consumer", "AI", "Wellness"],
+  category: "AI Product",
+  order: 6,
+  highlights: [
+    "Vertex AI + Claude ensemble for nuanced interpretation",
+    "Safety review and optional escalation to human experts",
+  ],
+  links: [],
+};
+
+## Challenge
+Users wanted more meaningful insights into their dreams beyond generic interpretations. Any solution needed empathy, cultural nuance, and safeguards against overreach.
+
+## Approach
+- Partnered with psychologists to define interpretation frameworks grounded in cognitive behavioral therapy.
+- Built a Node.js backend that routes prompts between Vertex AI and Claude depending on emotional weight.
+- Designed a React front-end with calming motion and journaling flows.
+- Added redaction, tone detection, and opt-in data donation for ongoing model fine-tuning.
+
+## Outcome
+- 92% of beta testers reported higher clarity on emotional triggers.
+- Reduced churn by enabling streak tracking and habit-forming reminders.
+- Established responsible AI guardrails with human-in-the-loop review for sensitive submissions.

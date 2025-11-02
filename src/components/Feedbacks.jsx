@@ -5,61 +5,46 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+const FeedbackCard = ({ index, quote, name, role, company }) => (
+  <motion.figure
+    variants={fadeIn("", "spring", index * 0.1, 0.75)}
+    className="relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 backdrop-blur-xl"
   >
-    <p className="text-white font-black text-[48px]">"</p>
-
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
-
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
-        />
-      </div>
-    </div>
-  </motion.div>
+    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/15 via-transparent to-emerald-400/10 opacity-80" />
+    <blockquote className="relative text-sm leading-relaxed text-slate-200 sm:text-base">
+      “{quote}”
+    </blockquote>
+    <figcaption className="relative flex flex-col text-xs uppercase tracking-[0.35em] text-slate-400">
+      <span className="text-sm font-semibold tracking-[0.2em] text-white">
+        {name}
+      </span>
+      <span>
+        {role} · {company}
+      </span>
+    </figcaption>
+  </motion.figure>
 );
 
 const Feedbacks = () => {
   return (
-    <div className="mt-12 bg-black-100 rounded-[20px]">
-      <div
-        className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
-      >
-        <motion.div variants={textVariant()}>
+    <div className="relative" aria-labelledby="testimonials-heading">
+      <div className="absolute inset-0 rounded-3xl bg-slate-900/40 blur-3xl" />
+      <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/80 p-10 shadow-[0_0_60px_rgba(59,130,246,0.25)]">
+        <motion.div variants={textVariant()} className="max-w-3xl">
           <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <h2 className={styles.sectionHeadText} id="testimonials-heading">
+            Signal from partners and collaborators.
+          </h2>
         </motion.div>
-      </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Feedbacks;
+export default SectionWrapper(Feedbacks, "testimonials");
