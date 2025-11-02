@@ -157,10 +157,9 @@ const CaseStudies = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="group relative h-full overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition-all hover:border-indigo-500/60"
+            className="group h-full rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition-all hover:border-indigo-500/60"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-emerald-400/10 opacity-70 transition group-hover:opacity-100" />
-            <div className="relative flex h-full flex-col gap-4">
+            <div className="flex h-full flex-col gap-4">
               <header className="flex flex-col gap-1">
                 <span className="text-xs uppercase tracking-[0.35em] text-indigo-200">
                   {study.meta.category || "Case Study"}
@@ -229,8 +228,7 @@ const CaseStudies = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="relative w-full overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/95 shadow-2xl">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(129,140,248,0.12),_transparent_60%)]" />
-                  <div className="relative flex flex-col gap-6 p-6 sm:p-10">
+            <div className="relative flex flex-col gap-6 p-6 sm:p-10">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                       <div>
                         <Dialog.Title className="text-2xl font-semibold text-white">

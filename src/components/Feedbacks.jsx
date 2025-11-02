@@ -8,13 +8,12 @@ import { testimonials } from "../constants";
 const FeedbackCard = ({ index, quote, name, role, company }) => (
   <motion.figure
     variants={fadeIn("", "spring", index * 0.1, 0.75)}
-    className="relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 backdrop-blur-xl"
+    className="flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 backdrop-blur-xl"
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/15 via-transparent to-emerald-400/10 opacity-80" />
-    <blockquote className="relative text-sm leading-relaxed text-slate-200 sm:text-base">
+    <blockquote className="text-sm leading-relaxed text-slate-200 sm:text-base">
       “{quote}”
     </blockquote>
-    <figcaption className="relative flex flex-col text-xs uppercase tracking-[0.35em] text-slate-400">
+    <figcaption className="flex flex-col text-xs uppercase tracking-[0.35em] text-slate-400">
       <span className="text-sm font-semibold tracking-[0.2em] text-white">
         {name}
       </span>
@@ -29,7 +28,7 @@ const Feedbacks = () => {
   return (
     <div className="relative" aria-labelledby="testimonials-heading">
       <div className="absolute inset-0 rounded-3xl bg-slate-900/40 blur-3xl" />
-      <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/80 p-10 shadow-[0_0_60px_rgba(59,130,246,0.25)]">
+  <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/80 p-10 shadow-xl shadow-slate-900/40">
         <motion.div variants={textVariant()} className="max-w-3xl">
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText} id="testimonials-heading">

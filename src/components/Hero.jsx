@@ -19,17 +19,7 @@ const highlightVariants = (index) => ({
 
 const Hero = () => {
   return (
-    <section
-      className="relative overflow-hidden"
-      aria-labelledby="hero-heading"
-      id="hero"
-    >
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -left-16 top-10 h-72 w-72 rounded-full bg-gradient-to-br from-indigo-500/40 via-purple-500/30 to-cyan-400/20 blur-3xl" />
-        <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-gradient-to-br from-emerald-400/30 via-teal-500/30 to-sky-500/20 blur-3xl" />
-        <div className="absolute -bottom-24 left-1/3 h-96 w-96 rounded-full bg-gradient-to-tr from-fuchsia-500/25 via-purple-500/20 to-indigo-500/25 blur-3xl" />
-      </div>
-
+    <section className="relative" aria-labelledby="hero-heading" id="hero">
       <div
         className={`${styles.paddingX} mx-auto flex w-full max-w-6xl flex-col gap-14 pt-36 text-slate-100`}
       >
@@ -59,10 +49,10 @@ const Hero = () => {
               <a
                 key={cta.label}
                 href={cta.href}
-                className={`group relative inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${
+                className={`group relative inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${
                   cta.variant === "primary"
-                    ? "bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 text-slate-950 shadow-[0_0_35px_rgba(59,130,246,0.35)]"
-                    : "border border-slate-700 bg-slate-900/60 text-slate-200 hover:border-slate-500"
+                    ? "border-indigo-400 bg-indigo-500 text-slate-950 hover:bg-indigo-400 hover:border-indigo-300"
+                    : "border-slate-700 bg-slate-900/60 text-slate-200 hover:border-slate-500"
                 }`}
               >
                 {cta.label}
@@ -82,10 +72,9 @@ const Hero = () => {
             <motion.div
               key={item}
               variants={highlightVariants(index)}
-              className="relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-slate-900/60 p-4 backdrop-blur-xl"
+              className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-4 backdrop-blur-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-transparent to-teal-400/10 opacity-70" />
-              <p className="relative text-sm font-semibold uppercase tracking-[0.35em] text-indigo-100">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-100">
                 {item}
               </p>
             </motion.div>
@@ -93,7 +82,7 @@ const Hero = () => {
         </motion.div>
 
         <div className="flex items-center gap-3 text-slate-400">
-          <span className="h-[1px] w-16 bg-gradient-to-r from-transparent via-slate-500 to-transparent" />
+          <span className="h-[1px] w-16 bg-slate-700" />
           <p className="text-xs uppercase tracking-[0.4em]">
             Scroll for impact
           </p>
@@ -108,7 +97,7 @@ const Hero = () => {
             <motion.span
               animate={{ y: [0, 16, 0] }}
               transition={{ duration: 1.6, repeat: Infinity, repeatType: "loop" }}
-              className="block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-400 to-cyan-400"
+              className="block h-2 w-2 rounded-full bg-indigo-400"
             />
           </a>
         </div>

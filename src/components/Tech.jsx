@@ -29,10 +29,9 @@ const Tech = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
-            className="relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
+            className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/15 via-transparent to-emerald-400/10" />
-            <div className="relative flex flex-col gap-4">
+            <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
                 {label}
               </h3>

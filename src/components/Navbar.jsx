@@ -98,7 +98,7 @@ const Navbar = () => {
             >
               <span>{nav.title}</span>
               {active === nav.id && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-gradient-to-r from-indigo-400 via-cyan-400 to-emerald-400" />
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-indigo-400" />
               )}
             </li>
           ))}

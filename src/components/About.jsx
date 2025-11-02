@@ -35,10 +35,8 @@ const About = () => {
             transition={{ type: "spring", stiffness: 120, damping: 14 }}
             className="relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
           >
-            <div
-              className={`absolute inset-0 bg-gradient-to-br ${pillar.accent} opacity-20`}
-            />
             <div className="relative flex flex-col gap-3">
+              <span className={`h-1 w-10 rounded-full ${pillar.indicator}`} />
               <h3 className="text-lg font-semibold text-white">
                 {pillar.title}
               </h3>
@@ -59,7 +57,6 @@ const About = () => {
             key={item.topic}
             className="group relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/50 p-6 backdrop-blur-xl"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-indigo-500/10 to-cyan-400/10 opacity-75 transition group-hover:opacity-90" />
             <div className="relative flex flex-col gap-3">
               <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
                 {item.topic}

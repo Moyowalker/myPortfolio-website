@@ -101,10 +101,9 @@ const InsightsBot = () => {
       <div className="mt-10 grid gap-6 lg:grid-cols-[2fr,1fr]">
         <motion.div
           variants={fadeIn("", "", 0.2, 1)}
-          className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/60"
+          className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/60"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-emerald-400/10" />
-          <div className="relative flex-1 overflow-y-auto p-6 sm:p-8">
+          <div className="flex-1 overflow-y-auto p-6 sm:p-8">
             <div className="flex flex-col gap-6">
               {messages.map((msg, index) => (
                 <div
@@ -135,7 +134,7 @@ const InsightsBot = () => {
             </div>
           </div>
           <form
-            className="relative border-t border-slate-800/80 bg-slate-950/80 p-4"
+            className="border-t border-slate-800/80 bg-slate-950/80 p-4"
             onSubmit={(event) => {
               event.preventDefault();
               submitQuestion(question);

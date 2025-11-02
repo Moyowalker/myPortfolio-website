@@ -18,7 +18,6 @@ const channelIcons = {
 const Contact = () => {
   return (
     <div className="relative" aria-labelledby="contact-heading">
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/15 via-transparent to-emerald-400/10 blur-3xl" />
       <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/80 p-10">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Get in touch</p>
@@ -45,10 +44,9 @@ const Contact = () => {
               <a
                 key={channel.label}
                 href={channel.href}
-                className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition hover:border-indigo-500/60"
+                className="group flex flex-col gap-4 overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition hover:border-indigo-500/60"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-400/10 opacity-80 transition group-hover:opacity-100" />
-                <div className="relative flex flex-col gap-3">
+                <div className="flex flex-col gap-3">
                   <Icon className="h-8 w-8 text-indigo-300" />
                   <span className="text-xs font-semibold uppercase tracking-[0.35em] text-indigo-200">
                     {channel.label}

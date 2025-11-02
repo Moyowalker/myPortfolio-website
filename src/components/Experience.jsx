@@ -14,7 +14,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="relative mt-14">
-        <span className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-indigo-500 via-slate-700 to-transparent" />
+  <span className="absolute left-5 top-0 h-full w-px bg-slate-800" />
         <div className="flex flex-col gap-10">
           {experiences.map((experience, index) => (
             <motion.article

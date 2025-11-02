@@ -31,19 +31,19 @@ export const pillars = [
     title: "Product Strategy",
     description:
       "Translating business vision into validated product bets, roadmaps, and measurable outcomes across complex stakeholder groups.",
-    accent: "from-cyan-500 to-blue-500",
+    indicator: "bg-cyan-300/70",
   },
   {
     title: "AI & Automation",
     description:
       "Designing AI-assisted workflows and automation at scale using Vertex AI, Claude, OpenAI, and domain-specific LLMs.",
-    accent: "from-violet-500 to-fuchsia-500",
+    indicator: "bg-violet-300/70",
   },
   {
     title: "Full-Stack Delivery",
     description:
       "Shipping resilient web and mobile products end-to-end with React, Node.js, Python, and cloud-native tooling.",
-    accent: "from-emerald-500 to-lime-500",
+    indicator: "bg-emerald-300/70",
   },
 ];
 
