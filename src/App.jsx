@@ -14,7 +14,7 @@ import {
 
 const App = () => {
   return (
-    <div className="relative min-h-screen bg-slate-950 text-slate-100">
+    <div className="relative min-h-screen bg-stone-950 text-stone-100">
       <Navbar />
       <main className="flex flex-col gap-48 pb-40">
         <Hero />

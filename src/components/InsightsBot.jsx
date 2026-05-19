@@ -87,7 +87,7 @@ const InsightsBot = () => {
   return (
     <section id="insights" aria-labelledby="insights-heading">
       <motion.div variants={textVariant()} className="max-w-4xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-stone-400">
           Ask me anything
         </p>
         <h2
@@ -101,7 +101,7 @@ const InsightsBot = () => {
       <div className="mt-14 grid gap-8 lg:grid-cols-[2fr,1fr]">
         <motion.div
           variants={fadeIn("", "", 0.2, 1)}
-          className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/60"
+          className="flex h-full flex-col overflow-hidden rounded-3xl border border-stone-800/70 bg-stone-900/60"
         >
           <div className="flex-1 overflow-y-auto p-6 sm:p-8">
             <div className="flex flex-col gap-6">
@@ -115,8 +115,8 @@ const InsightsBot = () => {
                   <div
                     className={`max-w-xl rounded-2xl border px-4 py-3 text-sm leading-relaxed shadow-sm ${
                       msg.role === "assistant"
-                        ? "border-indigo-500/30 bg-indigo-500/10 text-indigo-100"
-                        : "border-slate-700 bg-slate-950 text-slate-200"
+                        ? "border-amber-500/30 bg-amber-500/10 text-amber-100"
+                        : "border-stone-700 bg-stone-950 text-stone-200"
                     }`}
                   >
                     {msg.content}
@@ -125,7 +125,7 @@ const InsightsBot = () => {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="flex items-center gap-2 rounded-2xl border border-indigo-500/30 bg-indigo-500/10 px-4 py-3 text-xs uppercase tracking-[0.3em] text-indigo-100">
+                  <div className="flex items-center gap-2 rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-xs uppercase tracking-[0.3em] text-amber-100">
                     <SparklesIcon className="h-4 w-4 animate-pulse" />
                     Thinking
                   </div>
@@ -134,7 +134,7 @@ const InsightsBot = () => {
             </div>
           </div>
           <form
-            className="border-t border-slate-800/80 bg-slate-950/80 p-4"
+            className="border-t border-stone-800/80 bg-stone-950/80 p-4"
             onSubmit={(event) => {
               event.preventDefault();
               submitQuestion(question);
@@ -145,14 +145,14 @@ const InsightsBot = () => {
                 value={question}
                 onChange={(event) => setQuestion(event.target.value)}
                 placeholder="Ask about product leadership, AI automation, or a case study..."
-                className="flex-1 rounded-full border border-slate-800/70 bg-slate-900/80 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-indigo-500 focus:outline-none"
+                className="flex-1 rounded-full border border-stone-800/70 bg-stone-900/80 px-4 py-3 text-sm text-white placeholder:text-stone-500 focus:border-amber-500 focus:outline-none"
                 aria-label="Ask Moyosore a question"
                 disabled={isLoading}
               />
               <button
                 type="submit"
                 disabled={isLoading}
-                className="inline-flex items-center gap-2 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-indigo-100 transition hover:border-indigo-400 hover:bg-indigo-500/20 disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-amber-100 transition hover:border-amber-400 hover:bg-amber-500/20 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 Send
                 <ArrowLongRightIcon className="h-4 w-4" />
@@ -165,18 +165,18 @@ const InsightsBot = () => {
           variants={fadeIn("", "", 0.25, 1)}
           className="flex flex-col gap-6"
         >
-          <div className="rounded-3xl border border-slate-800/70 bg-slate-900/50 p-6 backdrop-blur-xl">
-            <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
+          <div className="rounded-3xl border border-stone-800/70 bg-stone-900/50 p-6 backdrop-blur-xl">
+            <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.35em] text-amber-200">
               <BoltIcon className="h-4 w-4" />
               Suggested prompts
             </h3>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-slate-300">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-stone-300">
               {suggestions.map((item) => (
                 <li key={item}>
                   <button
                     type="button"
                     onClick={() => submitQuestion(item)}
-                    className="text-left text-indigo-100 underline decoration-dotted underline-offset-4 transition hover:text-indigo-200"
+                    className="text-left text-amber-100 underline decoration-dotted underline-offset-4 transition hover:text-amber-200"
                     disabled={isLoading}
                   >
                     {item}
@@ -186,11 +186,11 @@ const InsightsBot = () => {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-slate-800/70 bg-slate-900/50 p-6 backdrop-blur-xl">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
+          <div className="rounded-3xl border border-stone-800/70 bg-stone-900/50 p-6 backdrop-blur-xl">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-200">
               Focus areas
             </h3>
-            <div className="mt-4 flex flex-col gap-4 text-sm text-slate-300">
+            <div className="mt-4 flex flex-col gap-4 text-sm text-stone-300">
               {knowledgeHighlights.map((item) => (
                 <div key={item.topic}>
                   <p className="font-semibold text-white">{item.topic}</p>
@@ -202,7 +202,7 @@ const InsightsBot = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-xs uppercase tracking-[0.35em] text-slate-500">
+            <p className="mt-4 text-xs uppercase tracking-[0.35em] text-stone-500">
               Responses blend cached knowledge with real-time AI calls when API keys are configured.
             </p>
           </div>

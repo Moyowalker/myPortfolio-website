@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section className="relative" aria-labelledby="hero-heading" id="hero">
       <div
-        className={`${styles.paddingX} mx-auto flex w-full max-w-6xl flex-col gap-20 pt-44 text-slate-100`}
+        className={`${styles.paddingX} mx-auto flex w-full max-w-6xl flex-col gap-20 pt-44 text-stone-100`}
       >
         <motion.div
           variants={heroVariants}
@@ -29,7 +29,7 @@ const Hero = () => {
           animate="show"
           className="flex flex-col gap-10"
         >
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-400/50 bg-indigo-500/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-indigo-200">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/50 bg-amber-500/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-amber-200">
             Product & AI Innovation
           </span>
 
@@ -38,10 +38,10 @@ const Hero = () => {
             className="font-display text-balance text-4xl font-black leading-tight tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
           >
             {heroContent.headlineTop}{" "}
-            <span className="text-indigo-300">{heroContent.headlineBottom}</span>
+            <span className="text-amber-300">{heroContent.headlineBottom}</span>
           </h1>
 
-          <p className="max-w-3xl text-lg text-slate-300 sm:text-xl">
+          <p className="max-w-3xl text-lg text-stone-300 sm:text-xl">
             {heroContent.statement}
           </p>
 
@@ -52,8 +52,8 @@ const Hero = () => {
                 href={cta.href}
                 className={`group relative inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] transition ${
                   cta.variant === "primary"
-                    ? "border-indigo-400 bg-indigo-500 text-slate-950 hover:bg-indigo-400 hover:border-indigo-300"
-                    : "border-slate-700 bg-slate-900/60 text-slate-200 hover:border-slate-500"
+                    ? "border-amber-400 bg-amber-500 text-stone-950 hover:bg-amber-400 hover:border-amber-300"
+                    : "border-stone-700 bg-stone-900/60 text-stone-200 hover:border-stone-500"
                 }`}
               >
                 {cta.label}
@@ -73,17 +73,17 @@ const Hero = () => {
             <motion.div
               key={item}
               variants={highlightVariants(index)}
-              className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-4 backdrop-blur-xl"
+              className="rounded-2xl border border-stone-800/70 bg-stone-900/60 p-4 backdrop-blur-xl"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-100">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-100">
                 {item}
               </p>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="flex items-center gap-3 text-slate-400">
-          <span className="h-[1px] w-16 bg-slate-700" />
+        <div className="flex items-center gap-3 text-stone-400">
+          <span className="h-[1px] w-16 bg-stone-700" />
           <p className="text-xs uppercase tracking-[0.4em]">
             Scroll for impact
           </p>
@@ -92,13 +92,13 @@ const Hero = () => {
         <div className="flex justify-center pb-4">
           <a
             href="#about"
-            className="relative inline-flex h-16 w-10 items-center justify-center rounded-full border border-slate-600/50 bg-slate-900/70"
+            className="relative inline-flex h-16 w-10 items-center justify-center rounded-full border border-stone-600/50 bg-stone-900/70"
             aria-label="Scroll to About section"
           >
             <motion.span
               animate={{ y: [0, 16, 0] }}
               transition={{ duration: 1.6, repeat: Infinity, repeatType: "loop" }}
-              className="block h-2 w-2 rounded-full bg-indigo-400"
+              className="block h-2 w-2 rounded-full bg-amber-400"
             />
           </a>
         </div>

@@ -18,7 +18,7 @@ const channelIcons = {
 const Contact = () => {
   return (
     <div className="relative" aria-labelledby="contact-heading">
-      <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/80 p-12 sm:p-16">
+      <div className="relative overflow-hidden rounded-3xl border border-stone-800/70 bg-stone-950/80 p-12 sm:p-16">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Get in touch</p>
           <h2 className={styles.sectionHeadText} id="contact-heading">
@@ -28,7 +28,7 @@ const Contact = () => {
 
         <motion.p
           variants={fadeIn("", "", 0.15, 1)}
-          className="mt-10 max-w-3xl text-sm text-slate-300 sm:text-base leading-relaxed"
+          className="mt-10 max-w-3xl text-sm text-stone-300 sm:text-base leading-relaxed"
         >
           Whether you are refining an AI roadmap, unlocking automation inside the enterprise, or launching a new product bet, I would love to partner on strategy and delivery. Reach out directly or drop a note via your preferred channel.
         </motion.p>
@@ -44,11 +44,11 @@ const Contact = () => {
               <a
                 key={channel.label}
                 href={channel.href}
-                className="group flex flex-col gap-5 overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl transition hover:border-indigo-500/60"
+                className="group flex flex-col gap-5 overflow-hidden rounded-2xl border border-stone-800/70 bg-stone-900/60 p-8 backdrop-blur-xl transition hover:border-amber-500/60"
               >
                 <div className="flex flex-col gap-3">
-                  <Icon className="h-8 w-8 text-indigo-300" />
-                  <span className="text-xs font-semibold uppercase tracking-[0.35em] text-indigo-200">
+                  <Icon className="h-8 w-8 text-amber-300" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">
                     {channel.label}
                   </span>
                   <p className="text-sm font-medium text-white">
@@ -62,7 +62,7 @@ const Contact = () => {
 
         <motion.div
           variants={fadeIn("", "", 0.35, 1)}
-          className="mt-14 flex flex-wrap items-center gap-4 rounded-2xl border border-indigo-500/40 bg-indigo-500/10 p-8 text-xs font-semibold uppercase tracking-[0.35em] text-indigo-100"
+          className="mt-14 flex flex-wrap items-center gap-4 rounded-2xl border border-amber-500/40 bg-amber-500/10 p-8 text-xs font-semibold uppercase tracking-[0.35em] text-amber-100"
         >
           <ArrowUpRightIcon className="h-5 w-5" />
           <span>

@@ -9,12 +9,12 @@ module.exports = {
         display: ["Space Grotesk", "ui-sans-serif"],
       },
       colors: {
-        primary: "#020617",
-        secondary: "#94a3b8",
-        accent: "#f97316", // electric orange accent replacing dull indigo
+        primary: "#0c0a09",
+        secondary: "#a8a29e",
+        accent: "#d9b272",
       },
       boxShadow: {
-        card: "0 20px 40px -15px rgba(249, 115, 22, 0.15)", // subtle orange glow
+        card: "0 20px 40px -15px rgba(217, 178, 114, 0.15)",
       },
       screens: {
         xs: "450px",

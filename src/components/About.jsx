@@ -19,7 +19,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-10 max-w-4xl text-base text-slate-300 sm:text-lg leading-relaxed"
+        className="mt-10 max-w-4xl text-base text-stone-300 sm:text-lg leading-relaxed"
       >
         {aboutSummary}
       </motion.p>
@@ -33,14 +33,14 @@ const About = () => {
             key={pillar.title}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 120, damping: 14 }}
-            className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl"
+            className="rounded-2xl border border-stone-800/70 bg-stone-900/60 p-8 backdrop-blur-xl"
           >
               <div className="relative flex flex-col gap-5">
               <span className={`h-1 w-10 rounded-full ${pillar.indicator}`} />
               <h3 className="text-lg font-semibold text-white">
                 {pillar.title}
               </h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-stone-300 leading-relaxed">
                 {pillar.description}
               </p>
             </div>
@@ -55,13 +55,13 @@ const About = () => {
         {knowledgeHighlights.map((item) => (
           <div
             key={item.topic}
-            className="group rounded-2xl border border-slate-800/70 bg-slate-900/50 p-8 backdrop-blur-xl"
+            className="group rounded-2xl border border-stone-800/70 bg-stone-900/50 p-8 backdrop-blur-xl"
           >
             <div className="relative flex flex-col gap-5">
-              <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-200">
                 {item.topic}
               </h4>
-              <ul className="flex flex-col gap-3 text-sm text-slate-300">
+              <ul className="flex flex-col gap-3 text-sm text-stone-300">
                 {item.points.map((point) => (
                   <li key={point} className="leading-relaxed">
                     {point}

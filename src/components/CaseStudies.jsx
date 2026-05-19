@@ -21,32 +21,32 @@ const mdxComponents = {
   h3: (props) => (
     <h3
       {...props}
-      className="mt-6 text-xl font-semibold text-indigo-200 first:mt-0"
+      className="mt-6 text-xl font-semibold text-amber-200 first:mt-0"
     />
   ),
   p: (props) => (
     <p
       {...props}
-      className="mt-4 text-sm leading-relaxed text-slate-200 first:mt-0"
+      className="mt-4 text-sm leading-relaxed text-stone-200 first:mt-0"
     />
   ),
   ul: (props) => (
     <ul
       {...props}
-      className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-200"
+      className="mt-4 list-disc space-y-2 pl-5 text-sm text-stone-200"
     />
   ),
   ol: (props) => (
     <ol
       {...props}
-      className="mt-4 list-decimal space-y-2 pl-5 text-sm text-slate-200"
+      className="mt-4 list-decimal space-y-2 pl-5 text-sm text-stone-200"
     />
   ),
   li: (props) => <li {...props} className="leading-relaxed" />,
   a: (props) => (
     <a
       {...props}
-      className="text-indigo-300 underline decoration-dotted underline-offset-4 transition hover:text-indigo-200"
+      className="text-amber-300 underline decoration-dotted underline-offset-4 transition hover:text-amber-200"
     />
   ),
   strong: (props) => (
@@ -55,7 +55,7 @@ const mdxComponents = {
   blockquote: (props) => (
     <blockquote
       {...props}
-      className="mt-6 border-l-4 border-indigo-500/60 pl-4 italic text-slate-100"
+      className="mt-6 border-l-4 border-amber-500/60 pl-4 italic text-stone-100"
     />
   ),
 };
@@ -141,7 +141,7 @@ const CaseStudies = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-10 max-w-3xl text-sm text-slate-300 sm:text-base leading-relaxed"
+        className="mt-10 max-w-3xl text-sm text-stone-300 sm:text-base leading-relaxed"
       >
         Explore the product patterns, architectural decisions, and outcomes
         behind each build. These breakdowns outline discovery insights, system
@@ -157,23 +157,23 @@ const CaseStudies = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="group h-full rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition-all hover:border-indigo-500/60"
+            className="group h-full rounded-2xl border border-stone-800/70 bg-stone-900/60 p-6 backdrop-blur-xl transition-all hover:border-amber-500/60"
           >
             <div className="flex h-full flex-col gap-4">
               <header className="flex flex-col gap-1">
-                <span className="text-xs uppercase tracking-[0.35em] text-indigo-200">
+                <span className="text-xs uppercase tracking-[0.35em] text-amber-200">
                   {study.meta.category || "Case Study"}
                 </span>
                 <h3 className="text-lg font-semibold text-white">
                   {study.meta.title}
                 </h3>
                 {study.meta.timeline && (
-                  <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
+                  <p className="text-xs uppercase tracking-[0.35em] text-stone-400">
                     {study.meta.timeline}
                   </p>
                 )}
               </header>
-              <p className="text-sm leading-relaxed text-slate-300">
+              <p className="text-sm leading-relaxed text-stone-300">
                 {study.meta.summary}
               </p>
               {Array.isArray(study.meta.tags) && (
@@ -181,7 +181,7 @@ const CaseStudies = () => {
                   {study.meta.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-indigo-500/40 bg-indigo-500/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-indigo-100"
+                      className="rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-amber-100"
                     >
                       {tag}
                     </span>
@@ -192,7 +192,7 @@ const CaseStudies = () => {
                 <button
                   type="button"
                   onClick={() => openStudy(study.slug)}
-                  className="inline-flex items-center gap-2 rounded-full border border-indigo-500/50 bg-indigo-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-indigo-100 transition hover:border-indigo-400 hover:bg-indigo-500/20"
+                  className="inline-flex items-center gap-2 rounded-full border border-amber-500/50 bg-amber-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-amber-100 transition hover:border-amber-400 hover:bg-amber-500/20"
                 >
                   Read Playbook
                 </button>
@@ -213,7 +213,7 @@ const CaseStudies = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-slate-950/70 backdrop-blur" />
+            <div className="fixed inset-0 bg-stone-950/70 backdrop-blur" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto px-4 py-10 sm:px-10">
@@ -227,7 +227,7 @@ const CaseStudies = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-950/95 shadow-2xl">
+                <Dialog.Panel className="relative w-full overflow-hidden rounded-3xl border border-stone-800/70 bg-stone-950/95 shadow-2xl">
             <div className="relative flex flex-col gap-6 p-6 sm:p-10">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                       <div>
@@ -235,7 +235,7 @@ const CaseStudies = () => {
                           {activeStudy?.meta?.title}
                         </Dialog.Title>
                         {activeStudy?.meta?.summary && (
-                          <p className="mt-2 max-w-2xl text-sm text-slate-300">
+                          <p className="mt-2 max-w-2xl text-sm text-stone-300">
                             {activeStudy.meta.summary}
                           </p>
                         )}
@@ -243,7 +243,7 @@ const CaseStudies = () => {
                       <button
                         type="button"
                         onClick={closeStudy}
-                        className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-slate-200 transition hover:border-indigo-500 hover:text-white"
+                        className="rounded-full border border-stone-700 bg-stone-900/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-stone-200 transition hover:border-amber-500 hover:text-white"
                       >
                         Close
                       </button>
@@ -253,14 +253,14 @@ const CaseStudies = () => {
                         {activeStudy.meta.highlights.map((highlight) => (
                           <div
                             key={highlight}
-                            className="rounded-2xl border border-indigo-500/30 bg-indigo-500/10 px-4 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-indigo-100"
+                            className="rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-amber-100"
                           >
                             {highlight}
                           </div>
                         ))}
                       </div>
                     )}
-                    <div className="prose prose-invert max-w-none prose-headings:tracking-tight prose-h3:text-indigo-200 prose-p:text-slate-200 prose-strong:text-white">
+                    <div className="prose prose-invert max-w-none prose-headings:tracking-tight prose-h3:text-amber-200 prose-p:text-stone-200 prose-strong:text-white">
                       {activeStudy?.Component && (
                         <MDXProvider components={mdxComponents}>
                           <activeStudy.Component />
@@ -275,7 +275,7 @@ const CaseStudies = () => {
                             href={link.href}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-indigo-100 transition hover:border-indigo-500 hover:bg-indigo-500/20"
+                            className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-amber-100 transition hover:border-amber-500 hover:bg-amber-500/20"
                           >
                             {link.label}
                           </a>

@@ -27,7 +27,7 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()} className="max-w-4xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-stone-400">
           Portfolio
         </p>
         <h2 className="text-pretty text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -37,7 +37,7 @@ const Works = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-10 max-w-3xl text-sm text-slate-300 sm:text-base leading-relaxed"
+        className="mt-10 max-w-3xl text-sm text-stone-300 sm:text-base leading-relaxed"
       >
         A snapshot of AI-powered products, automation engines, and user-centric experiences I have led from discovery to launch. Each project combines product strategy, technical architecture, and measurable outcomes.
       </motion.p>
@@ -50,14 +50,14 @@ const Works = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="group rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl transition-all hover:border-indigo-500/60"
+            className="group rounded-2xl border border-stone-800/70 bg-stone-900/60 p-8 backdrop-blur-xl transition-all hover:border-amber-500/60"
           >
               <div className="flex flex-col gap-6">
               <header className="flex flex-col gap-2">
                 <h3 className="text-lg font-semibold text-white">
                   {project.name}
                 </h3>
-                <p className="text-sm leading-relaxed text-slate-300">
+                <p className="text-sm leading-relaxed text-stone-300">
                   {project.summary}
                 </p>
               </header>
@@ -65,7 +65,7 @@ const Works = () => {
                 {project.stack.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-indigo-500/30 bg-slate-950/60 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-indigo-100"
+                    className="rounded-full border border-amber-500/30 bg-stone-950/60 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-amber-100"
                   >
                     {item}
                   </span>
@@ -77,7 +77,7 @@ const Works = () => {
                     href={project.links.live}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-slate-200 transition hover:border-indigo-500 hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-full border border-stone-700 bg-stone-900/70 px-4 py-2 text-stone-200 transition hover:border-amber-500 hover:text-white"
                   >
                     <ArrowTopRightOnSquareIcon className="h-4 w-4" />
                     Live
@@ -87,7 +87,7 @@ const Works = () => {
                   <button
                     type="button"
                     onClick={() => openCaseStudy(project.links.caseStudy)}
-                    className="inline-flex items-center gap-2 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-4 py-2 text-indigo-100 transition hover:border-indigo-500 hover:bg-indigo-500/20"
+                    className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-amber-100 transition hover:border-amber-500 hover:bg-amber-500/20"
                   >
                     <DocumentMagnifyingGlassIcon className="h-4 w-4" />
                     Case Study
