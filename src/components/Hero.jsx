@@ -21,13 +21,13 @@ const Hero = () => {
   return (
     <section className="relative" aria-labelledby="hero-heading" id="hero">
       <div
-        className={`${styles.paddingX} mx-auto flex w-full max-w-6xl flex-col gap-14 pt-36 text-slate-100`}
+        className={`${styles.paddingX} mx-auto flex w-full max-w-6xl flex-col gap-20 pt-44 text-slate-100`}
       >
         <motion.div
           variants={heroVariants}
           initial="hidden"
           animate="show"
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-10"
         >
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-400/50 bg-indigo-500/10 px-4 py-2 text-xs uppercase tracking-[0.4em] text-indigo-200">
             Product & AI Innovation
@@ -66,7 +66,7 @@ const Hero = () => {
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.12, delayChildren: 0.5 }}
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {heroContent.highlights.map((item, index) => (
             <motion.div

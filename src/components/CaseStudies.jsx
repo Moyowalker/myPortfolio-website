@@ -141,7 +141,7 @@ const CaseStudies = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-6 max-w-3xl text-sm text-slate-300 sm:text-base"
+        className="mt-10 max-w-3xl text-sm text-slate-300 sm:text-base leading-relaxed"
       >
         Explore the product patterns, architectural decisions, and outcomes
         behind each build. These breakdowns outline discovery insights, system
@@ -149,7 +149,7 @@ const CaseStudies = () => {
         experience layers.
       </motion.p>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-16 grid gap-8 md:grid-cols-2">
         {studies.map((study, index) => (
           <motion.article
             key={study.slug}

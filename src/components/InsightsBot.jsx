@@ -98,7 +98,7 @@ const InsightsBot = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[2fr,1fr]">
+      <div className="mt-14 grid gap-8 lg:grid-cols-[2fr,1fr]">
         <motion.div
           variants={fadeIn("", "", 0.2, 1)}
           className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/60"

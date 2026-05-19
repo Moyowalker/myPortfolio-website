@@ -37,12 +37,12 @@ const Works = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-6 max-w-3xl text-sm text-slate-300 sm:text-base"
+        className="mt-10 max-w-3xl text-sm text-slate-300 sm:text-base leading-relaxed"
       >
         A snapshot of AI-powered products, automation engines, and user-centric experiences I have led from discovery to launch. Each project combines product strategy, technical architecture, and measurable outcomes.
       </motion.p>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-16 grid gap-8 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.article
             key={project.name}
@@ -50,9 +50,9 @@ const Works = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="group rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl transition-all hover:border-indigo-500/60"
+            className="group rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl transition-all hover:border-indigo-500/60"
           >
-            <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-6">
               <header className="flex flex-col gap-2">
                 <h3 className="text-lg font-semibold text-white">
                   {project.name}

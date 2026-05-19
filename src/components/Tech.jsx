@@ -16,7 +16,7 @@ const Tech = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <div className="mt-14 grid gap-8 md:grid-cols-2">
         {Object.entries(techStack).map(([key, value], index) => {
           const label = key
             .split(/[-_]/)
@@ -29,7 +29,7 @@ const Tech = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
-            className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
+            className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl"
           >
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">

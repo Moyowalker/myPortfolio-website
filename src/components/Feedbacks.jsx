@@ -8,7 +8,7 @@ import { testimonials } from "../constants";
 const FeedbackCard = ({ index, quote, name, role, company }) => (
   <motion.figure
     variants={fadeIn("", "spring", index * 0.1, 0.75)}
-    className="flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 backdrop-blur-xl"
+    className="flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-slate-800/60 bg-slate-900/60 p-10 backdrop-blur-xl"
   >
     <blockquote className="text-sm leading-relaxed text-slate-200 sm:text-base">
       “{quote}”
@@ -36,7 +36,7 @@ const Feedbacks = () => {
           </h2>
         </motion.div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-14 grid gap-8 md:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
           ))}

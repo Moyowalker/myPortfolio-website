@@ -11,10 +11,10 @@ module.exports = {
       colors: {
         primary: "#020617",
         secondary: "#94a3b8",
-        accent: "#6366f1",
+        accent: "#f97316", // electric orange accent replacing dull indigo
       },
       boxShadow: {
-        card: "0 25px 60px -20px rgba(59, 130, 246, 0.35)",
+        card: "0 20px 40px -15px rgba(249, 115, 22, 0.15)", // subtle orange glow
       },
       screens: {
         xs: "450px",

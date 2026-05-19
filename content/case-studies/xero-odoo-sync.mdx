@@ -1,7 +1,7 @@
 export const meta = {
   title: "Xero–Odoo Sync",
   summary:
-    "Realtime bridge syncing cost, customer, and ledger objects between Xero and Odoo for distributed finance teams.",
+    "Finance automation bridge syncing customer, cost, and ledger objects between Xero and Odoo for distributed finance teams.",
   timeline: "2022",
   tags: ["Integrations", "Automation", "FinOps"],
   category: "Integration Platform",
@@ -14,13 +14,13 @@ export const meta = {
 };
 
 ## Challenge
-Growing professional services teams relied on both Xero and Odoo but lacked a trustworthy integration path. Manual CSV exports triggered mismatched balances, currency errors, and compliance risks.
+Growing teams relied on both Xero and Odoo but lacked a trustworthy integration path between them. Manual exports created mismatched balances, currency errors, and unnecessary compliance risk.
 
 ## Approach
-- Modelled canonical financial objects and reconciliation rules with finance leadership.
-- Built a message-driven sync engine in Python with Celery and Redis for resilient retries.
-- Leveraged Odoo XML-RPC and Xero SDK for delta-based updates, guarded with hashing and optimistic locking.
-- Implemented notification and reporting layers so finance operators could monitor state and self-heal issues.
+- Modeled canonical financial objects and reconciliation rules with finance stakeholders before implementing the sync layer.
+- Built a message-driven Python service with resilient retry behavior and explicit failure handling.
+- Used Odoo XML-RPC and the Xero SDK for delta-based updates, guarded with hashing, auditability, and idempotent processing.
+- Added monitoring and reporting layers so finance operators could understand state quickly and recover from issues without guesswork.
 
 ## Outcome
 - Delivered &lt;15 minute delay across ledgers with near-zero duplicate postings.

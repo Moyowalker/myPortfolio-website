@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="122" y1="38" x2="1037" y2="619" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F" />
+      <stop offset="1" stop-color="#0C1F34" />
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(242 122) rotate(33.4) scale(306 260)">
+      <stop stop-color="#22D3EE" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1018 126) rotate(146.5) scale(264 221)">
+      <stop stop-color="#FCD34D" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#FCD34D" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="line" x1="138" y1="471" x2="1068" y2="471" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.1" />
+      <stop offset="0.5" stop-color="#E2E8F0" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#FCD34D" stop-opacity="0.12" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)" />
+  <rect width="1200" height="630" rx="32" fill="url(#glowA)" />
+  <rect width="1200" height="630" rx="32" fill="url(#glowB)" />
+  <circle cx="1028" cy="513" r="188" fill="#0F2741" fill-opacity="0.78" />
+  <circle cx="1028" cy="513" r="112" stroke="#22D3EE" stroke-opacity="0.2" />
+  <circle cx="1028" cy="513" r="64" stroke="#FCD34D" stroke-opacity="0.35" />
+  <rect x="78" y="74" width="188" height="42" rx="21" fill="#0F2741" stroke="#1E3A5F" />
+  <text x="102" y="101" fill="#CFFAFE" font-family="Sora, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="5.2">MOYOSORE.ME</text>
+  <text x="82" y="194" fill="#F8FAFC" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-style="italic">Product operator.</text>
+  <text x="82" y="280" fill="#F8FAFC" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-style="italic">Full-stack builder.</text>
+  <text x="82" y="366" fill="#F8FAFC" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-style="italic">Systems thinker.</text>
+  <text x="84" y="438" fill="#CBD5E1" font-family="Sora, Arial, sans-serif" font-size="28" font-weight="400">Enterprise workflow systems, finance automation, logistics infrastructure,</text>
+  <text x="84" y="476" fill="#CBD5E1" font-family="Sora, Arial, sans-serif" font-size="28" font-weight="400">and trust-driven digital products built by Moyosore Ajayi.</text>
+  <line x1="84" y1="516" x2="1068" y2="516" stroke="url(#line)" stroke-width="2" />
+  <text x="84" y="566" fill="#A5F3FC" font-family="Sora, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="2.6">DEV@MOYOSORE.ME</text>
+  <text x="830" y="566" fill="#FDE68A" font-family="Sora, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="2.6">LAGOS, NIGERIA</text>
+</svg>

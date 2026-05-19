@@ -19,23 +19,23 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.15, 1)}
-        className="mt-6 max-w-4xl text-base text-slate-300 sm:text-lg"
+        className="mt-10 max-w-4xl text-base text-slate-300 sm:text-lg leading-relaxed"
       >
         {aboutSummary}
       </motion.p>
 
       <motion.div
         variants={fadeIn("", "", 0.25, 1)}
-        className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {pillars.map((pillar, index) => (
           <motion.article
             key={pillar.title}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 120, damping: 14 }}
-            className="relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 backdrop-blur-xl"
+            className="rounded-2xl border border-slate-800/70 bg-slate-900/60 p-8 backdrop-blur-xl"
           >
-            <div className="relative flex flex-col gap-3">
+              <div className="relative flex flex-col gap-5">
               <span className={`h-1 w-10 rounded-full ${pillar.indicator}`} />
               <h3 className="text-lg font-semibold text-white">
                 {pillar.title}
@@ -50,18 +50,18 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.35, 1)}
-        className="mt-16 grid gap-6 lg:grid-cols-2"
+        className="mt-20 grid gap-8 lg:grid-cols-2"
       >
         {knowledgeHighlights.map((item) => (
           <div
             key={item.topic}
-            className="group relative overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-900/50 p-6 backdrop-blur-xl"
+            className="group rounded-2xl border border-slate-800/70 bg-slate-900/50 p-8 backdrop-blur-xl"
           >
-            <div className="relative flex flex-col gap-3">
+            <div className="relative flex flex-col gap-5">
               <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-200">
                 {item.topic}
               </h4>
-              <ul className="flex flex-col gap-2 text-sm text-slate-300">
+              <ul className="flex flex-col gap-3 text-sm text-slate-300">
                 {item.points.map((point) => (
                   <li key={point} className="leading-relaxed">
                     {point}

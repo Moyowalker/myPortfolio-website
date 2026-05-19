@@ -1,27 +1,32 @@
 [
   {
-    "prompt": "ai initiatives",
-    "keywords": ["ai", "automation", "llm", "vertex", "claude"],
-    "answer": "Every AI initiative starts with a product hypothesis tied to an outcome—throughput, accuracy, cost, or delight. I translate that into measurable KPIs, prototype the workflow with stakeholders, and wrap the LLM experience in guardrails: red teams, human approvals, and telemetry. Vertex, Claude, and OpenAI sit behind a service layer so we can swap or ensemble models depending on risk and latency." 
+    "prompt": "enterprise workflow redesign",
+    "keywords": ["enterprise", "workflow", "operations", "internal tool", "process"],
+    "answer": "I usually start by mapping the real workflow before discussing features. That means understanding where approvals stall, where data gets duplicated, who needs visibility, and what decisions the software should help people make faster. From there I shape the product around control, clarity, and adoption, not just interface polish."
   },
   {
-    "prompt": "discovery sprint",
-    "keywords": ["discovery", "research", "product", "sprint"],
-    "answer": "My discovery sprint runs in three arcs: align on the opportunity and success metrics, run mixed-method research to map jobs-to-be-done, and validate the riskiest assumptions with prototypes. We finish with a lightweight roadmap, prioritised backlog, and instrumentation plan so delivery teams move fast with confidence." 
+    "prompt": "xero odoo sync",
+    "keywords": ["xero", "odoo", "finance", "sync", "reconciliation"],
+    "answer": "The Xero to Odoo work was about reducing reconciliation drag. The important part was not just moving records between systems, but doing it in a way that finance teams could trust: clear object mapping, careful sync logic, and enough observability to understand what happened when something failed."
   },
   {
-    "prompt": "product engineering collaboration",
-    "keywords": ["product", "engineering", "collaboration", "team"],
-    "answer": "I anchor collaboration in shared rituals: dual-track discovery, weekly demos, and async scoreboards that track outcomes, not output. Engineers join customer research, PMs own API contracts, and everyone sees the same telemetry. That keeps strategy, design, and delivery tightly looped without sacrificing speed." 
+    "prompt": "craeftmann",
+    "keywords": ["craeftmann", "artisan", "trust", "marketplace", "credibility"],
+    "answer": "Craeftmann is centered on trust. The problem is that customers often cannot confidently assess artisans, while artisans struggle to present credibility in a way that converts into real work. The product direction focuses on making trust visible and usable, not treating it as a vague brand promise."
   },
   {
-    "prompt": "automation",
-    "keywords": ["automation", "enterprise", "operations"],
-    "answer": "Automation succeeds when it blends business rules with experiential nuance. I co-design the blueprint with operators, define exception paths, and instrument the bots for observability. At Emocom we pair AutomationAnywhere with service layers in Node.js to deliver auditable flows across procurement, OEM management, and customer success." 
+    "prompt": "agriswitch",
+    "keywords": ["agriswitch", "logistics", "infrastructure", "movement", "supply"],
+    "answer": "AgriSwitch is about logistics clarity. In coordination-heavy environments, the product has to make movement state, exceptions, and operational decisions legible. My approach there is to design for reliability and visibility first so scale does not simply preserve manual chaos."
+  },
+  {
+    "prompt": "founder product build",
+    "keywords": ["founder", "startup", "mvp", "0 to 1", "product build"],
+    "answer": "With founder-led products, I try to reduce ambiguity quickly. That means clarifying the user problem, isolating the riskiest assumptions, and building a version of the product that is coherent enough to learn from without overbuilding too early."
   },
   {
     "prompt": "case study",
     "keywords": ["case", "study", "project", "example"],
-    "answer": "Each case study on this site details context, approach, and impact. InvoiceEase focuses on AI-assisted billing, DreamLens explores responsible AI in consumer wellness, and the Emocom Milestone Platform shows how we orchestrate enterprise workflows. Open any card to read the full playbook." 
+    "answer": "The case studies on this site focus on operating logic, system design, and delivery decisions. They cover work like the Xero to Odoo finance automation bridge, Emocom's internal operations platform, AgriSwitch logistics infrastructure, and the trust model behind Craeftmann."
   }
 ]

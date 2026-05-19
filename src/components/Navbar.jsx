@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+import BrandMark from "./BrandMark";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -61,68 +63,75 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "backdrop-blur-lg bg-slate-950/80 border-b border-slate-800/60"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+    <nav className={`${styles.paddingX} fixed top-0 z-50 w-full`}>
+      <div
+        className={`mx-auto mt-4 flex w-full max-w-7xl items-center justify-between rounded-full border px-4 py-2.5 sm:px-6 sm:py-3 transition-all duration-300 ${
+          scrolled
+            ? "border-white/10 bg-[#16130f]/88 shadow-[0_18px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl"
+            : "border-transparent bg-transparent"
+        }`}
+      >
         <button
           type="button"
-          onClick={() => handleNavClick("about")}
-          className="flex items-center gap-3 rounded-full bg-slate-900/50 px-4 py-2 text-left shadow-[0_0_25px_rgba(79,70,229,0.35)] backdrop-blur-md transition hover:bg-slate-900/70"
+          onClick={() => handleNavClick("hero")}
+          className="flex items-center gap-3 text-left"
         >
-          <img src={logo} alt="Moyosore Ajayi" className="h-9 w-9 rounded-full object-contain" />
+          <BrandMark className="h-10 w-10" withRing={false} />
           <div className="hidden sm:block">
-            <span className="text-xs uppercase tracking-[0.2em] text-slate-400">
+            <span className="text-[10px] uppercase tracking-[0.32em] text-stone-500">
               Moyosore Ajayi
             </span>
-            <p className="text-sm font-semibold text-slate-100">
-              Product & AI Innovation
+            <p className="mt-0.5 text-xs font-medium text-stone-300">
+              moyosore.me
             </p>
           </div>
         </button>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.id ? "text-white" : "text-slate-400"
-              } relative text-sm font-medium uppercase tracking-[0.2em] transition hover:text-white`}
-              onClick={() => handleNavClick(nav.id)}
-            >
-              <span>{nav.title}</span>
-              {active === nav.id && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full rounded-full bg-indigo-400" />
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="hidden lg:flex lg:items-center lg:gap-8">
+          <ul className="flex flex-row gap-7">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.id ? "text-stone-100" : "text-stone-400"
+                } relative cursor-pointer text-xs font-medium uppercase tracking-[0.24em] transition hover:text-white`}
+                onClick={() => handleNavClick(nav.id)}
+              >
+                <span>{nav.title}</span>
+                {active === nav.id && (
+                  <span className="absolute -bottom-2 left-0 h-px w-full bg-[#d9b272]" />
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="mailto:dev@moyosore.me"
+            className="inline-flex items-center rounded-full border border-[#d9b272]/30 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone-200 transition hover:border-[#d9b272] hover:text-white"
+          >
+            dev@moyosore.me
+          </a>
+        </div>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="h-[28px] w-[28px] cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } absolute top-20 right-4 z-40 w-56 flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/90 p-6 shadow-xl backdrop-blur-xl`}
+            } absolute top-20 right-6 z-40 w-60 flex-col gap-5 rounded-[1.6rem] border border-white/10 bg-[#16130f]/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl`}
           >
             <ul className="flex flex-col gap-4 text-sm uppercase tracking-[0.25em]">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`cursor-pointer font-medium ${
-                    active === nav.id ? "text-white" : "text-slate-400"
+                    active === nav.id ? "text-white" : "text-stone-400"
                   }`}
                   onClick={() => handleNavClick(nav.id)}
                 >
@@ -130,6 +139,12 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <a
+              href="mailto:dev@moyosore.me"
+              className="inline-flex items-center rounded-full border border-[#d9b272]/30 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone-200"
+            >
+              dev@moyosore.me
+            </a>
           </div>
         </div>
       </div>

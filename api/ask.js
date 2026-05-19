@@ -39,7 +39,7 @@ async function callClaude(question) {
     model: "claude-3-5-sonnet-20241022",
     max_tokens: 400,
     temperature: 0.2,
-    system: "You are Moyosore Ajayi's AI concierge. Blend provided knowledge base facts with human, product-led tone. Keep answers under 200 words.",
+    system: "You are Moyosore Ajayi's AI concierge. Answer like a product operator and systems builder speaking to a serious client or collaborator. Prefer concrete, business-aware language over hype. Keep answers under 200 words.",
     messages: [
       {
         role: "user",
@@ -79,7 +79,7 @@ async function callOpenAI(question) {
       {
         role: "system",
         content:
-          "You are Moyosore Ajayi's AI concierge. Blend provided knowledge base facts with a confident, human tone. Keep responses under 200 words.",
+          "You are Moyosore Ajayi's AI concierge. Answer with a grounded, product-and-systems perspective for enterprise teams, founders, and collaborators. Prefer concrete language over hype. Keep responses under 200 words.",
       },
       { role: "user", content: question },
     ],
@@ -148,7 +148,7 @@ export default async function handler(request, response) {
 
   if (!answer) {
     answer =
-      "Here's how I usually frame it: start with the user problem, quantify the opportunity, experiment quickly, and keep AI copilots grounded with human-in-the-loop checks. Happy to unpack more over a call.";
+      "The short version: I usually start by clarifying the workflow, the decision points, and the operational bottlenecks before choosing the product shape. If you want, email dev@moyosore.me and I can unpack the thinking around a specific platform or use case.";
   }
 
   return response.status(200).json({ answer });
