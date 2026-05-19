@@ -37,11 +37,12 @@ const Hero = () => {
             id="hero-heading"
             className="font-display text-balance text-4xl font-black leading-tight tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
           >
-            {heroContent.headline}
+            {heroContent.headlineTop}{" "}
+            <span className="text-indigo-300">{heroContent.headlineBottom}</span>
           </h1>
 
           <p className="max-w-3xl text-lg text-slate-300 sm:text-xl">
-            {heroContent.subhead}
+            {heroContent.statement}
           </p>
 
           <div className="flex flex-wrap items-center gap-6">
@@ -68,7 +69,7 @@ const Hero = () => {
           transition={{ staggerChildren: 0.12, delayChildren: 0.5 }}
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {heroContent.highlights.map((item, index) => (
+          {heroContent.roles.map((item, index) => (
             <motion.div
               key={item}
               variants={highlightVariants(index)}

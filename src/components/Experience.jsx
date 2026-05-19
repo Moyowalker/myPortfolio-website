@@ -41,7 +41,7 @@ const Experience = () => {
                   </p>
                 </div>
                 <ul className="flex list-disc flex-col gap-2 pl-5 text-sm text-slate-300">
-                  {experience.bullets.map((bullet) => (
+                  {(experience.outcomes || experience.bullets || []).map((bullet) => (
                     <li key={bullet} className="leading-relaxed">
                       {bullet}
                     </li>
